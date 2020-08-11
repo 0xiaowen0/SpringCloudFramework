@@ -1,0 +1,18 @@
+server:
+  port: 8089
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/xiaowen123/ApiWebTest.git
+          username: 1104460531@qq.com
+          password: 0p9o8i7u

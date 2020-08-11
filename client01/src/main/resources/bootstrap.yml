@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: single-provider
+  cloud:
+    config:
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+server:
+  port: 8081
+feign:
+  hystrix:
+    enabled: true
